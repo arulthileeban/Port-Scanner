@@ -8,5 +8,6 @@ soup = BeautifulSoup(req.content, 'lxml')
 table_classes = {"class": ["sortable", "plainrowheaders"]}
 wikitables = soup.findAll("table", table_classes)
 
-print(wikitables)
+for row in wikitables:
+	print row
 
